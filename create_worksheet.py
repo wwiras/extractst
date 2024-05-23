@@ -20,10 +20,12 @@ def extract_bibtex_to_csv(bibtex_file, output_csv):
         year = entry.get('year', 'N/A')
         authors = entry.get('author', 'N/A')
         authors_initial = entry.get('ID', 'N/A')
+        abstract = entry.get('abstract', 'N/A')
         file_url = entry.get('file', 'N/A')  # Assuming the file URL is stored in the 'file' field
-        data.append([number, title, journal, year, authors, authors_initial, file_url])
+        data.append([number, title, journal, year, authors, authors_initial, abstract, file_url])
 
-    df = pd.DataFrame(data, columns=["Number", "Title", "Journal", "Year", "Authors", "Authors Initial", "File URL"])
+    df = pd.DataFrame(data, columns=["Number", "Title", "Journal", "Year", "Authors", "Authors Initial", "Abstract",
+                                     "File URL"])
 
     # Save the DataFrame to a CSV file
     df.to_csv(output_csv, index=False)
