@@ -18,5 +18,5 @@ You will thank me due to this automated process.
 ## Scripts
 1. create_worksheet.py
 - This script extracts data from a BibTeX file and creates an Excel worksheet with the necessary metadata.
-```bash
-python create_worksheet.py <input_bibtex_file> <output_excel_file>
+  ```bash
+  python create_worksheet.py <input_bibtex_file> <output_excel_file>
